@@ -1,0 +1,63 @@
+{
+  "name": "@gradealabs/genji",
+  "version": "1.0.0",
+  "description": "Compiles .ts/.tsx/.js/.jsx files into a bundle",
+  "private": true,
+  "bin": {
+    "genji": "./lib/cli.js"
+  },
+  "main": "./lib/index.js",
+  "scripts": {
+    "setup": "ts-node ./scripts/setup",
+    "audit": "npm outdated --long",
+    "test": "cross-env NODE_ENV=test TS_NODE_PROJECT=./tsconfig.test.json nyc mocha",
+    "build": "npm run build:node",
+    "build:node": "tsc -p tsconfig.node.json",
+    "clean": "widowmaker lib coverage"
+  },
+  "keywords": [],
+  "author": "Darren Schnare <schnare.d@gmail.com>",
+  "license": "MIT",
+  "files": [
+    "lib"
+  ],
+  "devDependencies": {
+    "@gradealabs/fs-utils": "github:gradealabs/fs-utils",
+    "@gradealabs/widowmaker": "github:gradealabs/widowmaker",
+    "@types/mocha": "2.2.41",
+    "@types/node": "7.0.29",
+    "@types/sinon": "2.3.1",
+    "@types/yargs": "6.6.0",
+    "babel": "6.23.0",
+    "babel-eslint": "7.2.3",
+    "babel-plugin-transform-class-properties": "6.24.1",
+    "babel-plugin-transform-object-rest-spread": "6.23.0",
+    "cross-env": "5.0.1",
+    "eslint": "3.19.0",
+    "eslint-config-standard": "10.2.1",
+    "eslint-plugin-import": "2.3.0",
+    "eslint-plugin-node": "5.0.0",
+    "eslint-plugin-promise": "3.5.0",
+    "eslint-plugin-standard": "3.0.1",
+    "mocha": "3.4.2",
+    "nyc": "11.0.2",
+    "sinon": "2.3.4",
+    "source-map-support": "0.4.15",
+    "ts-node": "3.0.6"
+  },
+  "dependencies": {
+    "@gradealabs/fs-utils": "github:gradealabs/fs-utils",
+    "browserify": "14.4.0",
+    "exorcist": "0.4.0",
+    "tsify": "3.0.1",
+    "typescript": "2.3.4",
+    "uglify-js": "3.0.15",
+    "uglifyify": "4.0.0",
+    "watchify": "3.9.0",
+    "yargs": "8.0.1"
+  },
+  "engines": {
+    "node": "6.x",
+    "npm": "3.x"
+  }
+}
