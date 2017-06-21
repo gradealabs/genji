@@ -1,6 +1,6 @@
 {
   "name": "@gradealabs/genji",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Compiles .ts/.tsx/.js/.jsx files into a bundle",
   "bin": {
     "genji": "./lib/cli.js"
@@ -15,7 +15,7 @@
     "clean": "widowmaker lib coverage"
   },
   "keywords": [],
-  "author": "Darren Schnare <schnare.d@gmail.com>",
+  "author": "Darren Schnare <dschnare@gradealabs.com>",
   "repository": {
     "type": "git",
     "url": "https://github.com/gradealabs/genji"
