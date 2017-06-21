@@ -4,7 +4,7 @@ Compiles .ts/.tsx/.js/.jsx files into a bundle suitable for the browser.
 
 ## Quick Start
 
-    npm install gradealabs/genji -S
+    npm install @gradealabs/genji -S
 
 To use the API:
 

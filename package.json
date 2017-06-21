@@ -1,8 +1,7 @@
 {
   "name": "@gradealabs/genji",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Compiles .ts/.tsx/.js/.jsx files into a bundle",
-  "private": true,
   "bin": {
     "genji": "./lib/cli.js"
   },
@@ -17,13 +16,19 @@
   },
   "keywords": [],
   "author": "Darren Schnare <schnare.d@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gradealabs/genji"
+  },
+  "bugs": {
+    "url": "https://github.com/gradealabs/genji/issues"
+  },
   "license": "MIT",
   "files": [
     "lib"
   ],
   "devDependencies": {
-    "@gradealabs/fs-utils": "github:gradealabs/fs-utils",
-    "@gradealabs/widowmaker": "github:gradealabs/widowmaker",
+    "@gradealabs/widowmaker": "2.0.2",
     "@types/mocha": "2.2.41",
     "@types/node": "7.0.29",
     "@types/sinon": "2.3.1",
@@ -46,7 +51,7 @@
     "ts-node": "3.0.6"
   },
   "dependencies": {
-    "@gradealabs/fs-utils": "github:gradealabs/fs-utils",
+    "@gradealabs/fs-utils": "2.0.3",
     "browserify": "14.4.0",
     "exorcist": "0.4.0",
     "tsify": "3.0.1",
