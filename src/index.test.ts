@@ -28,4 +28,36 @@ describe('genji', function () {
       assert.ok(fs.existsSync('.genji/out.js.map'))
     }).then(done, done)
   })
+
+  it('should compile a library bundle and expose a module', function (done) {
+    this.timeout(8000)
+
+    genji(
+      [ 'react' ],
+      '.genji/react.js',
+      {
+        minify: true,
+        sourceMaps: true,
+        project: './tsconfig.test.json',
+        expose: [ 'react' ]
+      }
+    ).then(() => {
+      assert.ok(fs.existsSync('.genji/react.js'))
+      assert.ok(fs.existsSync('.genji/react.js.map'))
+    }).then(() => {
+      return genji(
+        [ 'src/_fixtures/libuser.js' ],
+        '.genji/libuser.js',
+        {
+          minify: true,
+          sourceMaps: true,
+          project: './tsconfig.test.json',
+          external: [ 'react' ]
+        }
+      )
+    }).then(() => {
+      assert.ok(fs.existsSync('.genji/libuser.js'))
+      assert.ok(fs.existsSync('.genji/libuser.js.map'))
+    }).then(done, done)
+  })
 })

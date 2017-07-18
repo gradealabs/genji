@@ -1,6 +1,6 @@
 {
   "name": "@gradealabs/genji",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Compiles .ts/.tsx/.js/.jsx files into a bundle",
   "bin": {
     "genji": "./lib/cli.js"
@@ -8,6 +8,7 @@
   "main": "./lib/index.js",
   "scripts": {
     "setup": "ts-node ./scripts/setup",
+    "prepublish": "npm run build",
     "audit": "npm outdated --long",
     "test": "cross-env NODE_ENV=test TS_NODE_PROJECT=./tsconfig.test.json nyc mocha",
     "build": "npm run build:node",
@@ -46,6 +47,7 @@
     "eslint-plugin-standard": "3.0.1",
     "mocha": "3.4.2",
     "nyc": "11.0.2",
+    "react": "15.6.1",
     "sinon": "2.3.4",
     "source-map-support": "0.4.15",
     "ts-node": "3.0.6"

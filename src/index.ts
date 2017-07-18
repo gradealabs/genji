@@ -29,10 +29,13 @@ export default function genji (entries: string[], outFileName: string, { standal
           { code: 'EINVALIDEXPOSE' }
         ))
       }
-    } else if (Array.isArray(external) && external.length) {
-      b.add(entries)
+    }
+
+    if (Array.isArray(external) && external.length) {
       external.forEach(n => b.external(n))
-    } else {
+    }
+
+    if (!(Array.isArray(expose) && expose.length)) {
       b.add(entries)
     }
 
@@ -134,7 +137,7 @@ function uglify (fileName, { sourceMaps = false } = {}) {
   .then(({ code, map }) => {
     return Promise.all([
       new Promise((resolve, reject) => {
-        fs.writeFile(fileName, code, 'utf8', error => {
+        fs.writeFile(fileName, code, { encoding: 'utf8' }, error => {
           error ? reject(error) : resolve()
         })
       }),
@@ -142,7 +145,7 @@ function uglify (fileName, { sourceMaps = false } = {}) {
         fs.writeFile(
           fileName + '.map',
           map.toString(),
-          'utf8',
+          { encoding: 'utf8' },
           error => error ? reject(error) : resolve()
         )
       })
