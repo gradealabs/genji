@@ -46,13 +46,14 @@ describe('genji', function () {
       assert.ok(fs.existsSync('.genji/react.js.map'))
     }).then(() => {
       return genji(
-        [ 'src/_fixtures/libuser.js' ],
+        [ './src/_fixtures/0.0.1/libuser.js' ],
         '.genji/libuser.js',
         {
           minify: true,
           sourceMaps: true,
           project: './tsconfig.test.json',
-          external: [ 'react' ]
+          external: [ 'react' ],
+          expose: [ 'libuser' ]
         }
       )
     }).then(() => {
