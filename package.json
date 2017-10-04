@@ -1,6 +1,6 @@
 {
   "name": "@gradealabs/genji",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Compiles .ts/.tsx/.js/.jsx files into a bundle",
   "bin": {
     "genji": "./lib/cli.js"
@@ -15,7 +15,14 @@
     "build:node": "tsc -p tsconfig.node.json",
     "clean": "widowmaker lib coverage"
   },
-  "keywords": ["bundle", "scripts", "javascript", "typescript", "jsx", "tsx"],
+  "keywords": [
+    "bundle",
+    "scripts",
+    "javascript",
+    "typescript",
+    "jsx",
+    "tsx"
+  ],
   "author": "Darren Schnare <dschnare@gradealabs.com>",
   "repository": {
     "type": "git",
@@ -57,11 +64,13 @@
     "browserify": "14.4.0",
     "exorcist": "0.4.0",
     "tsify": "3.0.1",
-    "typescript": "2.3.4",
     "uglify-js": "3.0.15",
     "uglifyify": "4.0.0",
     "watchify": "3.9.0",
     "yargs": "8.0.1"
+  },
+  "peerDependencies": {
+    "typescript": "^2.5.3"
   },
   "engines": {
     "node": "6.x",
