@@ -1,6 +1,6 @@
 {
   "name": "@gradealabs/genji",
-  "version": "1.0.5",
+  "version": "1.0.53",
   "description": "Compiles .ts/.tsx/.js/.jsx files into a bundle",
   "bin": {
     "genji": "./lib/cli.js"
