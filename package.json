@@ -60,7 +60,7 @@
     "ts-node": "3.0.6"
   },
   "dependencies": {
-    "@gradealabs/fs-utils": "github:gradealabs/fs-utils#2.2.51",
+    "@gradealabs/fs-utils": "2.2.51",
     "browserify": "14.4.0",
     "exorcist": "0.4.0",
     "tsify": "3.0.1",
