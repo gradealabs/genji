@@ -1,7 +1,7 @@
 import * as assert from 'assert'
 import * as fs from 'fs'
 import * as path from 'path'
-import { rmdir } from '@gradealabs/fs-utils'
+import { rmdir } from '@launchfort/fs-utils'
 import genji from './index'
 
 describe('genji', function () {

@@ -6,7 +6,7 @@ import * as tsify from 'tsify'
 import * as uglifyify from 'uglifyify'
 import * as watchify from 'watchify'
 import * as UglifyJs from 'uglify-js'
-import { mkdir } from '@gradealabs/fs-utils'
+import { mkdir } from '@launchfort/fs-utils'
 
 /**
  * Bundles the specified entry script files.

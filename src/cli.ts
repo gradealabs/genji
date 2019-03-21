@@ -34,12 +34,12 @@ if (require.main === module) {
       },
       'outfile': {
         alias: 'O',
-        type: [ 'string', 'array' ],
+        type: 'string',
         demandOption: true,
         describe: 'The bundle output file'
       },
       'standalone': {
-        type: [ 'string', 'boolean' ],
+        type: 'boolean',
         describe: 'Generate a UMD bundle for this export name'
       },
       'project': {
@@ -78,13 +78,13 @@ if (require.main === module) {
     }
 
     genji(argv._, [].concat(argv.outfile).pop(), {
-      minify: argv.minify,
-      watch: argv.watch,
-      standalone,
-      sourceMaps: argv.sourcemaps,
-      project: argv.project,
-      expose: argv.expose,
-      external: argv.external
+      minify: !!argv.minify,
+      watch: !!argv.watch,
+      standalone: standalone as string,
+      sourceMaps: !!argv.sourcemaps,
+      project: argv.project as string,
+      expose: argv.expose as string[],
+      external: argv.external as string[]
     })
     .then(() => new Date().getTime() - start)
     .then(elapsed => {

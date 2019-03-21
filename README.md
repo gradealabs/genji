@@ -4,11 +4,11 @@ Compiles .ts/.tsx/.js/.jsx files into a bundle suitable for the browser.
 
 ## Quick Start
 
-    npm install @gradealabs/genji -S
+    npm install @launchfort/genji -S
 
 To use the API:
 
-    import genji from '@gradealabs/genji'
+    import genji from '@launchfort/genji'
 
     genji([ 'src/index.ts' ], 'dest/out.js', {
       minify: true,
@@ -119,7 +119,7 @@ Supported options:
 
 Example:
 
-    import genji from '@gradealabs/genji'
+    import genji from '@launchfort/genji'
 
     genji([ 'src/index.ts' ], 'dest/out.js', {
       minify: true,
